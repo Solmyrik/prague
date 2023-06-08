@@ -5,6 +5,7 @@
     padding: 40px 0px;
   }
   &__container {
+    position: relative;
   }
 
   &__title {
@@ -69,8 +70,12 @@
     border-radius: 10px;
     transition: background-color 0.3s;
     cursor: pointer;
+    color: $white;
+    border-radius: 10px;
+    transition: all 0.3s;
     &:hover {
       background-color: inherit;
+      color: $black;
     }
   }
 }

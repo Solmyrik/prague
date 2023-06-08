@@ -37,11 +37,12 @@
     background-color: $main;
     border: 1.5px solid $main;
     font-weight: 700;
-    color: $black;
+    color: $white;
     border-radius: 10px;
-    transition: background-color 0.3s;
+    transition: all 0.3s;
     &:hover {
       background-color: inherit;
+      color: $black;
     }
     @media (max-width: $mobile) {
       margin-right: 50px;
