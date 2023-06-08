@@ -8,6 +8,13 @@
     background-color: $light;
     display: flex;
     justify-content: flex-end;
+    transform: translate(-100px, 0);
+    opacity: 0;
+    transition: all 0.5s;
+    &._active {
+      opacity: 1;
+      transform: translate(0, 0);
+    }
   }
 
   &__content {
@@ -50,6 +57,13 @@
 
   &__right {
     flex: 0 1 50%;
+    transform: translate(100px, 0);
+    opacity: 0;
+    transition: all 0.5s;
+    &._active {
+      opacity: 1;
+      transform: translate(0, 0);
+    }
   }
 
   &__img {

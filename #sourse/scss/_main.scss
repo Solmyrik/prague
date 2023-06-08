@@ -14,6 +14,13 @@
 
   &__left {
     flex: 0 1 55%;
+    transform: translate(-100px, 0);
+    opacity: 0;
+    transition: all 0.5s;
+    &._active {
+      opacity: 1;
+      transform: translate(0, 0);
+    }
   }
 
   &__suptitle {
@@ -59,6 +66,13 @@
   &__right {
     flex: 0 1 45%;
     min-width: 0;
+    transform: translate(100px, 0);
+    opacity: 0;
+    transition: all 0.5s;
+    &._active {
+      opacity: 1;
+      transform: translate(0, 0);
+    }
   }
 
   &__slider {

@@ -2,6 +2,9 @@
   height: calc(100vh - 100px);
   width: 100vw;
   position: relative;
+  @media (max-width: $mobile) {
+    height: calc(100vh - 80px);
+  }
   &__image {
     width: 100vw;
     height: 100%;
@@ -35,11 +38,25 @@
     @media (max-width: $mobile) {
       font-size: 40px;
     }
+    transform: translate(-100px, 0);
+    opacity: 0;
+    transition: all 0.7s;
+    &._active {
+      opacity: 1;
+      transform: translate(0, 0);
+    }
   }
   &__subtitle {
     font-size: 25px;
     @media (max-width: $mobile) {
       font-size: 18px;
+    }
+    transform: translate(-100px, 0);
+    opacity: 0;
+    transition: all 0.9s;
+    &._active {
+      opacity: 1;
+      transform: translate(0, 0);
     }
   }
   .main__button {
@@ -48,6 +65,13 @@
     transition: opacity 0.3s;
     &:hover {
       opacity: 0.7;
+    }
+    transform: translate(-100px, 0);
+    opacity: 0;
+    transition: all 1.2s;
+    &._active {
+      opacity: 1;
+      transform: translate(0, 0);
     }
   }
 }

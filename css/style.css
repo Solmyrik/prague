@@ -177,6 +177,12 @@ main {
   height: 100px;
 }
 
+@media (max-width: 767.98px) {
+  .header__container {
+    height: 80px;
+  }
+}
+
 .header__logo img {
   width: 140px;
 }
@@ -345,6 +351,12 @@ main {
   position: relative;
 }
 
+@media (max-width: 767.98px) {
+  .bg {
+    height: calc(100vh - 80px);
+  }
+}
+
 .bg__image {
   width: 100vw;
   height: 100%;
@@ -377,6 +389,11 @@ main {
 .bg__title {
   font-size: 100px;
   margin-bottom: 50px;
+  -webkit-transform: translate(-100px, 0);
+          transform: translate(-100px, 0);
+  opacity: 0;
+  -webkit-transition: all 0.7s;
+  transition: all 0.7s;
 }
 
 @media (max-width: 991.98px) {
@@ -391,8 +408,19 @@ main {
   }
 }
 
+.bg__title._active {
+  opacity: 1;
+  -webkit-transform: translate(0, 0);
+          transform: translate(0, 0);
+}
+
 .bg__subtitle {
   font-size: 25px;
+  -webkit-transform: translate(-100px, 0);
+          transform: translate(-100px, 0);
+  opacity: 0;
+  -webkit-transition: all 0.9s;
+  transition: all 0.9s;
 }
 
 @media (max-width: 767.98px) {
@@ -401,15 +429,32 @@ main {
   }
 }
 
+.bg__subtitle._active {
+  opacity: 1;
+  -webkit-transform: translate(0, 0);
+          transform: translate(0, 0);
+}
+
 .bg .main__button {
   color: #ffffff;
   background-color: #ab1143;
   -webkit-transition: opacity 0.3s;
   transition: opacity 0.3s;
+  -webkit-transform: translate(-100px, 0);
+          transform: translate(-100px, 0);
+  opacity: 0;
+  -webkit-transition: all 1.2s;
+  transition: all 1.2s;
 }
 
 .bg .main__button:hover {
   opacity: 0.7;
+}
+
+.bg .main__button._active {
+  opacity: 1;
+  -webkit-transform: translate(0, 0);
+          transform: translate(0, 0);
 }
 
 .main {
@@ -442,6 +487,17 @@ main {
   -webkit-box-flex: 0;
       -ms-flex: 0 1 55%;
           flex: 0 1 55%;
+  -webkit-transform: translate(-100px, 0);
+          transform: translate(-100px, 0);
+  opacity: 0;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.main__left._active {
+  opacity: 1;
+  -webkit-transform: translate(0, 0);
+          transform: translate(0, 0);
 }
 
 .main__suptitle {
@@ -503,6 +559,17 @@ main {
       -ms-flex: 0 1 45%;
           flex: 0 1 45%;
   min-width: 0;
+  -webkit-transform: translate(100px, 0);
+          transform: translate(100px, 0);
+  opacity: 0;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.main__right._active {
+  opacity: 1;
+  -webkit-transform: translate(0, 0);
+          transform: translate(0, 0);
 }
 
 .main__slider {
@@ -557,6 +624,17 @@ main {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+  -webkit-transform: translate(-100px, 0);
+          transform: translate(-100px, 0);
+  opacity: 0;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.about__left._active {
+  opacity: 1;
+  -webkit-transform: translate(0, 0);
+          transform: translate(0, 0);
 }
 
 .about__content {
@@ -612,6 +690,17 @@ main {
   -webkit-box-flex: 0;
       -ms-flex: 0 1 50%;
           flex: 0 1 50%;
+  -webkit-transform: translate(100px, 0);
+          transform: translate(100px, 0);
+  opacity: 0;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.about__right._active {
+  opacity: 1;
+  -webkit-transform: translate(0, 0);
+          transform: translate(0, 0);
 }
 
 .about__img {
@@ -662,6 +751,10 @@ main {
   transition: all 0.5s;
 }
 
+.categories__items:first-child {
+  margin-bottom: 30px;
+}
+
 @media (max-width: 991.98px) {
   .categories__items {
     -ms-grid-columns: 1fr 1fr;
@@ -697,6 +790,11 @@ main {
   padding: 30px;
   color: #ffffff;
   text-align: center;
+  -webkit-transform: translate(0px, 100px);
+          transform: translate(0px, 100px);
+  opacity: 0;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 
 @media (max-width: 767.98px) {
@@ -704,6 +802,12 @@ main {
     font-size: 14px;
     padding: 20px 10px;
   }
+}
+
+.categories__item._active {
+  opacity: 1;
+  -webkit-transform: translate(0, 0);
+          transform: translate(0, 0);
 }
 
 .categories__buttons {
@@ -779,6 +883,11 @@ main {
   padding: 20px 0px;
   border-bottom: 1px solid #000000;
   line-height: 130%;
+  -webkit-transform: translate(-100px, 0px);
+          transform: translate(-100px, 0px);
+  opacity: 0;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 
 @media (max-width: 767.98px) {
@@ -786,6 +895,12 @@ main {
     font-size: 15px;
     padding: 15px 0px;
   }
+}
+
+.rules__item._active {
+  opacity: 1;
+  -webkit-transform: translate(0, 0);
+          transform: translate(0, 0);
 }
 
 .footer {
