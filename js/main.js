@@ -26,3 +26,16 @@ function ibg() {
   }
 }
 ibg();
+
+//items
+
+const items = document.querySelector('.items');
+const categorieButton = document.querySelector('.categories__button');
+
+categorieButton.addEventListener('click', itemsHandler);
+
+function itemsHandler(e) {
+  e.preventDefault();
+  items.classList.add('active');
+  categorieButton.style.display = 'none';
+}
