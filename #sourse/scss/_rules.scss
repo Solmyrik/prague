@@ -1,0 +1,32 @@
+.rules {
+  padding: 50px 0px;
+  background-color: $light;
+  &__title {
+    font-size: 22px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+  }
+
+  &__subtitle {
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 40px;
+    text-transform: lowercase;
+  }
+
+  &__body {
+  }
+
+  &__item {
+    font-size: 20px;
+    font-weight: 300;
+    padding: 20px 0px;
+    border-bottom: 1px solid $black;
+    line-height: 130%;
+    @media (max-width: $mobile) {
+      font-size: 15px;
+      padding: 15px 0px;
+    }
+  }
+}
