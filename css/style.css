@@ -377,13 +377,7 @@ main {
   position: absolute;
   color: #ffffff;
   top: 20%;
-  left: 10%;
-}
-
-@media (max-width: 1410px) {
-  .bg__content {
-    left: 15px;
-  }
+  left: 15px;
 }
 
 .bg__title {
