@@ -13,12 +13,20 @@
     img {
       width: 140px;
     }
+    @media (max-width: $mobileSmall) {
+      img {
+        width: 110px;
+      }
+    }
   }
 
   &__left {
     display: flex;
     align-items: center;
     gap: 50px;
+    @media (max-width: $mobileSmall) {
+      gap: 0;
+    }
   }
 
   &__menu {
