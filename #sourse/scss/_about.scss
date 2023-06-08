@@ -1,0 +1,47 @@
+.about {
+  display: flex;
+  &__left {
+    flex: 0 1 50%;
+    background-color: $light;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  &__content {
+    max-width: 705px;
+    padding-top: 30px;
+    padding-left: 15px;
+  }
+
+  &__title {
+    font-size: 22px;
+    font-weight: 500;
+    margin-bottom: 70px;
+    text-transform: uppercase;
+  }
+  &__text {
+    padding-right: 30px;
+    font-size: 18px;
+    line-height: 140%;
+    font-weight: 300;
+    margin-bottom: 30px;
+    span {
+      font-weight: 400;
+    }
+  }
+
+  &__subtitle {
+  }
+
+  &__right {
+    flex: 0 1 50%;
+  }
+
+  &__img {
+    width: 100%;
+    padding-bottom: 70%;
+    @media (max-width: $pc) {
+      padding-bottom: 90%;
+    }
+  }
+}

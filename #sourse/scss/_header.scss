@@ -1,0 +1,145 @@
+.header {
+  position: relative;
+  border-bottom: 1px solid $gray;
+  &__container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100px;
+  }
+
+  &__logo {
+    img {
+      width: 140px;
+    }
+  }
+
+  &__left {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+  }
+
+  &__menu {
+  }
+
+  &__button {
+    padding: 15px 30px;
+    background-color: $main;
+    border: 1.5px solid $main;
+    font-weight: 700;
+    color: $black;
+    border-radius: 10px;
+    transition: background-color 0.3s;
+    &:hover {
+      background-color: inherit;
+    }
+    @media (max-width: $mobile) {
+      margin-right: 50px;
+    }
+  }
+}
+
+.menu {
+  &__body {
+    @media (max-width: $mobile) {
+      transform: translate(100%, 0%);
+      transition: transform 0.8s;
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      overflow: auto;
+      padding: 80px 10px 30px 10px;
+      background-color: rgba(255, 255, 255, 0.96);
+      z-index: 5;
+
+      &._active {
+        transform: translate(0px, 0%);
+      }
+    }
+  }
+
+  &__list {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    @media (max-width: $mobile) {
+      padding-top: 30px;
+      display: block;
+      text-align: center;
+    }
+  }
+
+  &__item {
+    @media (max-width: $mobile) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__link {
+    text-transform: uppercase;
+    font-size: 20px;
+    color: $black;
+    font-weight: 500;
+    transition: all 0.3s;
+    &:hover {
+      color: $main;
+    }
+    @media (max-width: $mobile) {
+      font-size: 24px;
+    }
+  }
+}
+
+.header__burger {
+  @media (max-width: $mobile) {
+    display: block;
+    position: absolute;
+    width: 30px;
+    height: 18px;
+    cursor: pointer;
+    z-index: 10;
+    right: 15px;
+    top: 50%;
+    transform: translate(0, -50%);
+
+    span {
+      transition: 0.3s all;
+      top: calc(50% - 1px);
+      left: 0px;
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      background-color: $black;
+
+      &:first-child {
+        top: 0px;
+      }
+
+      &:last-child {
+        top: auto;
+        bottom: 0px;
+      }
+    }
+
+    &._active {
+      span {
+        transform: scale(0);
+        background-color: $black;
+
+        &:first-child {
+          transform: rotate(-45deg);
+          top: 8px;
+        }
+
+        &:last-child {
+          transform: rotate(45deg);
+          bottom: 8px;
+        }
+      }
+    }
+  }
+}

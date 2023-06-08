@@ -1,0 +1,29 @@
+html {
+  scroll-behavior: smooth;
+}
+// resolution
+$pc: 1410px;
+$tablet: 991.98px;
+$mobile: 767.98px;
+$mobileSmall: 479.98px;
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+//colors
+$main: #ab1143;
+$yellow: #ffcc80;
+$white: #ffffff;
+$black: #000000;
+$gray: #a5a19e;
+$light: #f5f5f5;
+$light-blue: #bbcef2;
+
+.ibg {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+
+  img {
+    display: none;
+  }
+}
