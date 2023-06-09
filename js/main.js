@@ -8,8 +8,8 @@ if (iconMenu) {
   });
 }
 
-alert(`Мой телеграм: https://t.me/solmyr_k  
-Мой whatsapp: https://api.whatsapp.com/send?phone=79158152958`);
+alert(`телеграм: https://t.me/solmyr_k  
+whatsapp: https://api.whatsapp.com/send?phone=79158152958`);
 
 const listMenu = document.querySelector('.menu__list');
 listMenu.addEventListener('click', (e) => {
