@@ -51,3 +51,12 @@ main {
 @import '_categories';
 @import '_rules';
 @import '_footer';
+
+.header__lols {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  @media (max-width: $mobile) {
+    gap: 5px;
+  }
+}
